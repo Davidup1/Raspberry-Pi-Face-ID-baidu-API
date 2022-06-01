@@ -22,7 +22,7 @@
 < img  width = "495"  alt = "设置默认值"  src = " https://user-images.githubusercontent.com/94554614/171319309-91a229d3-6c78-4ffe-bde0-abc85edadb8e.png " >
 设置完成后用VNC Viewer软件来访问树莓派桌面
 <img width="513" alt="image" src="https://user-images.githubusercontent.com/94554614/171319476-767b86b0-352a-4cbc-9d2e-35393822308d.png">
-#### 2。下载百度人脸识别api，Python SDK
+#### 2.在百度智能云下载人脸识别SDK
 先百度智能注册账号，在人脸识别应用创建一个应用，然后创建人脸库
 然后记得把自己应用的 AppID,API Key,Sec Key 记录下来，后面用。
 然后建立人脸库，在上传人脸，人脸库的ID记下来。
