@@ -35,4 +35,10 @@ sudo raspi-config
 然后用VNC Viewer的上传工具传到树莓派桌面
 然后在树莓派上解压
 <img width="1280" alt="image" src="https://user-images.githubusercontent.com/94554614/171320694-cec313e7-df48-4492-9a2f-bedcc72d6a15.png">
-#### 然后
+#### 3.然后就是一些在树莓派上面的代码操作了，在其他文件里面分享
+在解压完之后，方便起见，在SDK的文件夹里面用命令行下载aip的初始化文件
+``` terminal
+sudo pip install baidu-aip
+```
+然后来到文件夹内创建一个test.py文件来初步测试
+
