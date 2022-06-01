@@ -151,7 +151,7 @@ if result['error_msg']=='SUCCESS':#如果成功了
 ```
 # 收尾工作
 写下主函数，其中要注意，由于我们的项目具有其他打开门的方式，所以会有传感器模块来向onenet的数据集传输门的开关状态，我们的门禁系统要在不同的状态下做出不同的反应
-所以要有一个获取状态的方式
+所以要有一个获取状态的方式，具体可以参考官方文档https://open.iot.10086.cn/doc/art723.html#108
 ``` Python
 #获取数据
 def http_get_data():
@@ -184,3 +184,7 @@ if __name__ =='__main__':
             print('稍等1秒进入下一次检测')
         time.sleep(1)
 ```
+### 调试工具
+哦对了，在发送日志，或者调试过程想要看一下数据集数据时，可以用postman来发送请求然后查看，还挺方便的
+<img width="976" alt="image" src="https://user-images.githubusercontent.com/94554614/171372394-350bdc41-71d2-4970-a1e1-4eb907bd40df.png">
+header,url写法都可以参考官方文档
