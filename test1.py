@@ -130,13 +130,13 @@ def go_api(image):
 
                 return 0
 
-        curren_time=time.asctime(time.localtime(time.time()))#获取当前时间
+            curren_time=time.asctime(time.localtime(time.time()))#获取当前时间
 
-    #将人员出入的记录保存到Log.txt中
+        #将人员出入的记录保存到Log.txt中
 
-        f=open('Log.txt','a')
-        f.write("Person: "+name+" "+"Time:"+str(curren_time)+'\n')
-        f.close()
+            f=open('Log.txt','a')
+            f.write("Person: "+name+" "+"Time:"+str(curren_time)+'\n')
+            f.close()
     #将该记录发送到onenet
         msg = "Person: "+name+" "+"Time:"+str(curren_time)+'\n'
         http_put_data(msg)
@@ -163,15 +163,14 @@ if __name__ =='__main__':
         getimage()#拍照
         img=transimage()#转换照片格式
         res=go_api(img)#将转换了格式的图片上传到百度云
-
-        if(res==1):#是人脸库中的人
-            state_t = http_get_data()
-            state = str(state_t,encoding='utf-8').split('\"')[18][1]
-            if (state==0):
+        state_t = http_get_data()
+        state = str(state_t,encoding='utf-8').split('\"')[18][1]
+        if(res==1 and state=='0'):#是人脸库中的人
                 print("开门")
-            else:
+        elif(res==1):
                 playmusic('/home/pi/Desktop/testsound/test4.mp3')
         else:
             print("关门")
             print('稍等1秒进入下一次检测')
         time.sleep(1)
+
