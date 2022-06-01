@@ -40,5 +40,5 @@ sudo raspi-config
 ``` terminal
 sudo pip install baidu-aip
 ```
-然后来到文件夹内创建一个test.py文件来初步测试
-
+然后来到文件夹内创建一个test.py文件来实现我们的代码
+后期在解释代码哈！
